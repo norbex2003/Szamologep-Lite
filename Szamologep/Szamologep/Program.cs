@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Szamologep
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Kérek egy számot!");
+            double a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Kérek még egy számot!");
+            double b = Convert.ToInt32(Console.ReadLine());
+            double osszeadas = Math.Round(a + b, 4);
+            double kivonas = Math.Round(a - b, 4);
+            double szorzas = Math.Round(a * b, 4);
+            double osztas = Math.Round(a / b, 4);
+
+            Console.WriteLine($"Az összeadásának eredménye: {osszeadas}");
+            Console.WriteLine($"A kivonásának eredménye: {kivonas}");
+
+            if (osztas == 0 && szorzas == 0)
+            {
+                Console.WriteLine("A nullával való osztásnak nincs értelme");
+                Console.WriteLine("A nullával való szorzásnak nincs értelme");
+            }
+
+
+            if (osztas != 0 && szorzas != 0)
+            {
+                Console.WriteLine($"Az osztásának eredménye: {osztas}");
+                Console.WriteLine($"A szorzásának eredménye: {szorzas}");
+            }
+            Console.ReadKey();
+        }
+    }
+}
